@@ -1,0 +1,22 @@
+{% extends 'blogApp/index.html' %}
+
+{% block header %}
+My Blogs
+{% endblock header %}
+
+
+{% block content %}
+
+{% if blog_list %}
+
+{% for eachItem in blog_list %}
+<h2>{{ eachItem.userName }}</h2>
+<p>{{ eachItem.blogPost }}</p>
+<p>{{ eachItem.blogEntry }}</p>
+
+{% endfor %}
+
+{% else %}
+<p>No Blogs Available.</p>
+{% endif %}
+{% endblock content %}
